@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="126617" started-at="2016-11-30T14:20:09Z" finished-at="2016-11-30T14:22:16Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="126617" started-at="2016-11-30T14:20:09Z" finished-at="2016-11-30T14:22:16Z">
+      <class name="TestNGtests.Ajax">
+        <test-method status="PASS" signature="startTest()[pri:0, instance:TestNGtests.Ajax@17e2f02]" name="startTest" is-config="true" duration-ms="115067" started-at="2016-11-30T19:50:09Z" finished-at="2016-11-30T19:52:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method status="PASS" signature="test_AjaxCalls()[pri:0, instance:TestNGtests.Ajax@17e2f02]" name="test_AjaxCalls" duration-ms="11374" started-at="2016-11-30T19:52:05Z" finished-at="2016-11-30T19:52:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_AjaxCalls -->
+        <test-method status="PASS" signature="endTest()[pri:0, instance:TestNGtests.Ajax@17e2f02]" name="endTest" is-config="true" duration-ms="26" started-at="2016-11-30T19:52:16Z" finished-at="2016-11-30T19:52:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+      </class> <!-- TestNGtests.Ajax -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
