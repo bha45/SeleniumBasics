@@ -1,4 +1,4 @@
-package DataDrivenTest;
+package datadrivenTest;
 
 import java.io.File;
 import java.io.IOException;
