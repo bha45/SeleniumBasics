@@ -3,49 +3,43 @@ package seleniumBasics;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class adminlogin {
+public class AdminLogin {
 
-	/**
-	 * @param args
-	 */
-	static WebDriverWait wait;
-	public static void main(String[] args) 
-	{
-		
-		/*System.setProperty("webdriver.chrome.driver","E:/ECLIPSE ENV//SELENIUM LIBS//chromedriver.exe");
-		WebDriver driver=new ChromeDriver();
-		*/
-		//System.setProperty("webdriver.firefox.marionette","E:/ECLIPSE ENV//SELENIUM LIBS//wires.exe");
-		System.setProperty("webdriver.firefox.marionette","E:/ECLIPSE ENV//SELENIUM LIBS//geckodriver.exe");
-		//System.setProperty("webdriver.gecko.driver","E:/ECLIPSE ENV//SELENIUM LIBS//geckodriver.exe");*/
-		WebDriver driver=new FirefoxDriver();
-		
-		
+	public static void main(String[] args) {
+
+		// provide your path of driver location
+		System.setProperty("webdriver.firefox.marionette", "./BrowserDrivers/geckodriver.exe");
+
+		// Driver instance is created
+		WebDriver driver = new FirefoxDriver();
+
+		// Launching the browser with the below url
 		driver.get("http://www.gcrit.com/build3/admin/login.php");
+
 		driver.findElement(By.name("username")).sendKeys("admin");
-		driver.findElement(By.name("password")).sendKeys("admin@12");
-		//driver.findElement(By.id("tdb1")).click();
-		WebDriverWait wait = new WebDriverWait(driver, 5000);
-        wait.until(ExpectedConditions.elementToBeClickable(By.id("tdb1")));
+		driver.findElement(By.name("password")).sendKeys("admin@123");
 		driver.findElement(By.id("tdb1")).click();
-		
-		
-        String url=driver.getCurrentUrl();
-        System.out.println(url);
-        
-		if(url.equals("http://www.gcrit.com/build3/admin/index.php"))
+
+		// Capturing the current page url
+		String Actualurl = driver.getCurrentUrl();
+		System.out.println(Actualurl);
+
+		// It is the Expected url
+		String Expectedurl = "http://www.gcrit.com/build3/admin/index.php";
+
+		// Verifying the captured the url
+		if (Expectedurl.equals(Actualurl)) 
 		{
-		System.out.println("passed");
-		}
-		else
+			System.out.println("passed");
+		} 
+		else 
 		{
-		System.out.println("failed");
+			System.out.println("failed");
 		}
 
-	driver.close();
+		// The below method will close the current browser window
+		driver.close();
 	}
-	
+
 }

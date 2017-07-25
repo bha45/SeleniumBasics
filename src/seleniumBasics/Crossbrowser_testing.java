@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
-public class Crossbrowser_testing {
+public class CrossBrowser_Testing {
 
 	// Declaring all the global variables
 	public static WebDriver driver;
@@ -20,21 +20,21 @@ public class Crossbrowser_testing {
 
 				browsername = "FireFox";
 				// provide your path of driver location
-				System.setProperty("webdriver.firefox.marionette", "E:/ECLIPSE ENV//SELENIUM LIBS//geckodriver.exe");
+				System.setProperty("webdriver.firefox.marionette", "./BrowserDrivers/geckodriver.exe");
 				// Driver instance is created
 				driver = new FirefoxDriver();
 			} else if (browser == 2) {
 
 				browsername = "Chrome";
 				// provide your path of driver location
-				System.setProperty("webdriver.chrome.driver", "E:/ECLIPSE ENV//SELENIUM LIBS//chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", "./BrowserDrivers/chromedriver.exe");
 				// Driver instance is created
 				driver = new ChromeDriver();
 			} else if (browser == 3) {
 
 				browsername = "Internet Explorer";
 				// provide your path of driver location
-				System.setProperty("webdriver.ie.driver", "E:/ECLIPSE ENV//SELENIUM LIBS//IEdriver.exe");
+				System.setProperty("webdriver.ie.driver", "./BrowserDrivers/IEdriver.exe");
 				// Driver instance is created
 				driver = new InternetExplorerDriver();
 			}
@@ -51,6 +51,7 @@ public class Crossbrowser_testing {
 			} else {
 				System.out.println(browsername + " " + "Google Appliction Lunched-Fialed");
 			}
+			// The below method will close the current browser window
 			driver.close();
 		}
 

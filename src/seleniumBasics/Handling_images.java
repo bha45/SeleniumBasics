@@ -4,12 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class Handling_images {
+public class Handling_Images {
 
 	public static void main(String[] args) {
 		
 		// provide your path of driver location
-		System.setProperty("webdriver.firefox.marionette", "E:/ECLIPSE ENV//SELENIUM LIBS//geckodriver.exe");
+		System.setProperty("webdriver.firefox.marionette", "./BrowserDrivers/geckodriver.exe");
 
 		// Driver instance is created
 		WebDriver driver = new FirefoxDriver();

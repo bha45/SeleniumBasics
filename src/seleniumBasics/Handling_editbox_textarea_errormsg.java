@@ -5,12 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class Handling_editbox_textarea_errormsg {
+public class Handling_Editbox_Textarea_ErrorMsg {
 
 	public static void main(String[] args) throws InterruptedException {
 		
 		// provide your path of driver location
-		System.setProperty("webdriver.firefox.marionette", "E:/ECLIPSE ENV//SELENIUM LIBS//geckodriver.exe");
+		System.setProperty("webdriver.firefox.marionette", "./BrowserDrivers/geckodriver.exe");
 
 		// Driver instance is created
 		WebDriver driver = new FirefoxDriver();
@@ -32,7 +32,7 @@ public class Handling_editbox_textarea_errormsg {
 		WebElement email = driver.findElement(By.id("Email"));
 		email.sendKeys("jaga");
 		email.clear();
-		// Problem- String s=email.getText();
+		
 		System.out.println(email.isDisplayed());
 		System.out.println(email.isEnabled());
 

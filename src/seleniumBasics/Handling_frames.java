@@ -4,11 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class Handling_frames {
+public class Handling_Frames {
 
 	public static void main(String[] args) throws InterruptedException {
+		
 		// provide your path of driver location
-		System.setProperty("webdriver.firefox.marionette", "E:/ECLIPSE ENV//SELENIUM LIBS//geckodriver.exe");
+		System.setProperty("webdriver.firefox.marionette", "./BrowserDrivers/geckodriver.exe");
 
 		// Driver instance is created
 		WebDriver driver = new FirefoxDriver();

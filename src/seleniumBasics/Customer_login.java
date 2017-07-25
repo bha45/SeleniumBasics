@@ -4,12 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class Customer_login {
+public class Customer_Login {
 
 	public static void main(String[] args) {
 		
 		// provide your path of driver location
-		System.setProperty("webdriver.firefox.marionette", "E:/ECLIPSE ENV//SELENIUM LIBS//geckodriver.exe");
+		System.setProperty("webdriver.firefox.marionette", "./BrowserDrivers/geckodriver.exe");
 
 		// Driver instance is created
 		WebDriver driver = new FirefoxDriver();
@@ -26,11 +26,16 @@ public class Customer_login {
 		String url = driver.getCurrentUrl();
 
 		// Verifying the captured url
-		if (url.contains("http://www.gcrit.com/build3/index.php")) {
+		if (url.contains("http://www.gcrit.com/build3/index.php")) 
+		{
 			System.out.println("Login Successful - Passed");
-		} else {
+		} 
+		else 
+		{
 			System.out.println("Login Unsuccessful - Failed");
 		}
+		
+		// The below method will close the current browser window
 		driver.close();
 
 	}

@@ -6,12 +6,12 @@ import org.openqa.selenium.WebElement;
 //import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class automating_gmail {
+public class Automating_Gmail {
 
 	public static void main(String[] args) throws InterruptedException {
 		
 		// provide your path of driver location
-		System.setProperty("webdriver.chrome.driver", "E:/ECLIPSE ENV//SELENIUM LIBS//chromedriver.exe");
+		System.setProperty("webdriver.firefox.marionette", "./BrowserDrivers/geckodriver.exe");
 		
 		// Driver instance is created
 		WebDriver driver = new ChromeDriver();
@@ -20,6 +20,7 @@ public class automating_gmail {
 		driver.get("https://accounts.google.com/ServiceLogin?sacu=1&scc=1&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&hl=en&service=mail#identifier");
 
 		// Automating the Gmail login using WebElement
+		// For Username and Password provide valid data
 		WebElement jaga = driver.findElement(By.id("Email"));
 		jaga.sendKeys("testjaga001");
 		WebElement jaga1 = driver.findElement(By.id("next"));
@@ -37,6 +38,7 @@ public class automating_gmail {
 		jaga5.click();
 
 		// Automating the Gmail login
+		// For Username and Password provide valid data
 		driver.findElement(By.name("Email")).sendKeys("testjaga001");
 		driver.findElement(By.id("next")).click();
 		driver.get("https://accounts.google.com/ServiceLogin?sacu=1&scc=1&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&hl=en&service=mail#password");

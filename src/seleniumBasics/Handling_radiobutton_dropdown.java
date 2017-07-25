@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class Handling_radiobutton_dropdown {
+public class Handling_Radiobutton_Dropdown {
 
 	public static void main(String[] args) {
 
@@ -20,7 +20,7 @@ public class Handling_radiobutton_dropdown {
 		// The method will maximize the browser window
 		driver.manage().window().maximize();
 
-		// radio button
+		// Radio button
 		// Launching the browser with the below url
 		driver.get("http://www.gcrit.com/build3/create_account.php");
 
@@ -32,7 +32,7 @@ public class Handling_radiobutton_dropdown {
 		mradio.click();
 		System.out.println(mradio.isSelected());
 
-		// drop down box
+		// Drop down box
 		// Launching the browser with the below url
 		driver.get("http://www.gcrit.com/build3/create_account.php");
 

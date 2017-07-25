@@ -3,12 +3,12 @@ package seleniumBasics;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class Browsernavigation_methods {
+public class BrowserNavigation_Methods {
 
 	public static void main(String[] args) {
 		
 		// provide your path of driver location
-		System.setProperty("webdriver.firefox.marionette", "E:/ECLIPSE ENV//SELENIUM LIBS//geckodriver.exe");
+		System.setProperty("webdriver.firefox.marionette", "./BrowserDrivers/geckodriver.exe");
 
 		// Driver instance is created
 		WebDriver driver = new FirefoxDriver();
@@ -19,8 +19,7 @@ public class Browsernavigation_methods {
 		String url = driver.getCurrentUrl();
 		System.out.println(url);
 
-		// navigate.to - It will navigate to the Yahoo page from Google home
-		// page
+		// navigate.to - It will navigate to the Yahoo page from Google home page
 		driver.navigate().to("https://in.yahoo.com/");
 		String url1 = driver.getCurrentUrl();
 		System.out.println(url1);
@@ -40,7 +39,7 @@ public class Browsernavigation_methods {
 		String url4 = driver.getCurrentUrl();
 		System.out.println(url4);
 
-		// driver close
+		// driver close - It will close the current browser window
 		driver.close();
 	}
 

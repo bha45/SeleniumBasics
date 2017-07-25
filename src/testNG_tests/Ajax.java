@@ -1,4 +1,4 @@
-package testNG_tests;
+package testNG_Tests;
 
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;

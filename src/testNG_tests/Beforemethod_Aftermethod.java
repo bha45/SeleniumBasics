@@ -1,4 +1,4 @@
-package testNG_tests;
+package testNG_Tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
