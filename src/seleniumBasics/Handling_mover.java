@@ -1,3 +1,7 @@
+/**
+ * @author Jagatheshwaran
+ * 
+ */
 package seleniumBasics;
 
 import org.openqa.selenium.By;
@@ -27,10 +31,12 @@ public class Handling_Mover {
 		// Instance of Actions class is created
 		Actions builder = new Actions(driver);
 
-		WebElement menu = driver.findElement(By.linkText("Sell Your Car"));
+		WebElement menu = driver.findElement(By.xpath("//*[@class='global-nav--link'][text()='Sell Your Car']"));
 		builder.moveToElement(menu).build().perform();
 
 		driver.findElement(By.linkText("Determining Your Offer")).click();
+		
+		System.out.println("Mover is done Successfully"); 
 
 	}
 

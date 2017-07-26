@@ -1,3 +1,7 @@
+/**
+ * @author Jagatheshwaran
+ * 
+ */
 package seleniumBasics;
 
 import java.util.Set;
@@ -17,7 +21,7 @@ public class Handling_WindowHandle {
 		WebDriver driver = new FirefoxDriver();
 
 		// Launching the browser with the below url
-		driver.get("file:///E:/ECLIPSE%20ENV/SELENIUM%20LIBS/Login.html");
+		driver.get("file:///E:/ECLIPSE%20ENV/Selenium_Excercises/SeleniumBasics/TestResources/Login.html");
 
 		driver.findElement(By.linkText("Sign Up")).click();
 

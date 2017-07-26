@@ -1,3 +1,7 @@
+/**
+ * @author Jagatheshwaran
+ * 
+ */
 package seleniumBasics;
 
 import org.openqa.selenium.By;
@@ -29,7 +33,7 @@ public class Is_series {
 		System.out.println(b);
 
 		// Launching the browser with the below url
-		driver.get("file:///E:/ECLIPSE%20ENV/SELENIUM%20LIBS/checkbox.html");
+		driver.get("file:///E:/ECLIPSE%20ENV/Selenium_Excercises/SeleniumBasics/TestResources/checkbox.html");
 
 		// is Selected - It will check whether the Web element is selected
 		boolean c = driver.findElement(By.name("option2")).isSelected();

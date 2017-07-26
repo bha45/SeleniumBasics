@@ -1,3 +1,7 @@
+/**
+ * @author Jagatheshwaran
+ * 
+ */
 package seleniumBasics;
 
 import java.util.List;
@@ -12,7 +16,7 @@ public class Handling_Table {
 	public static void main(String[] args) {
 		
 		// provide your path of driver location
-		System.setProperty("webdriver.firefox.marionette", "E:/ECLIPSE ENV//SELENIUM LIBS//geckodriver.exe");
+		System.setProperty("webdriver.firefox.marionette", "./BrowserDrivers/geckodriver.exe");
 
 		// Driver instance is created
 		WebDriver driver = new FirefoxDriver();
@@ -21,7 +25,7 @@ public class Handling_Table {
 		driver.manage().window().maximize();
 
 		// Launching the browser with the below url
-		driver.get("file:///E:/ECLIPSE%20ENV/SELENIUM%20LIBS/Tables.html");
+		driver.get("file:///E:/ECLIPSE%20ENV/Selenium_Excercises/SeleniumBasics/TestResources/Tables.html");
 		WebElement html = driver.findElement(By.xpath("html/body/table"));
 		String val = driver.findElement(By.xpath("html/body/table/tbody/tr[2]/td[1]")).getText();
 		System.out.println(val);
