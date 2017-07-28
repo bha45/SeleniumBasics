@@ -1,9 +1,9 @@
-package testNG_Tests;
+package testNG_Parallel_Grouping;
 
 import org.junit.Assert;
 import org.testng.annotations.Test;
 
-public class Mutliple_tests 
+public class Mutliple_Tests 
 {
 	@Test
 	public void testA(){

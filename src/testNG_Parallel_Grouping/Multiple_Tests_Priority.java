@@ -1,9 +1,9 @@
-package testNG_Tests;
+package testNG_Parallel_Grouping;
 
 import org.junit.Assert;
 import org.testng.annotations.Test;
 
-public class Multiple_tests_priority 
+public class Multiple_Tests_Priority 
 {
 
 	@Test (priority = 1)

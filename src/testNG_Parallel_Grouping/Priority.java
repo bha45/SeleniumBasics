@@ -1,4 +1,4 @@
-package testNG_Tests;
+package testNG_Parallel_Grouping;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;

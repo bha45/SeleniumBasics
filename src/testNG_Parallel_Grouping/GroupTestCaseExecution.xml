@@ -1,0 +1,14 @@
+<suite name="Ecommerce">
+	<test name="SanityTest">
+		<groups>
+			<run>
+				<include name="sanity" />
+				<include name="regression" />
+			</run>
+		</groups>
+		<classes>
+			<class name="testNG_Parallel_Grouping.BeforeGroups_Test_AfterGroups" />
+		</classes>
+	</test>
+</suite>
+

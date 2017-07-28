@@ -1,8 +1,0 @@
-<suite name="Ecommerce" parallel="false">
-  <test name="SanityTest">
-    <classes>
-    <class name="TestNG.Para.Group.NewTest1"/>
-    <class name="TestNG.Para.Group.NewTest2"/> 
-    </classes>
-  </test> 
-</suite>
