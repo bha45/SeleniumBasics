@@ -14,7 +14,7 @@ public class Handling_Interaction_between_Browsers {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		// provide your path of driver location
+		// Provide the path of driver location
 		System.setProperty("webdriver.firefox.marionette", "./BrowserDrivers/geckodriver.exe");
 
 		// Driver instance is created

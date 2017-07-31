@@ -13,13 +13,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 // The class is created with name : AdminLogin_Userdefinedmethods
 public class AdminLogin_Userdefinedmethods {
 	
-	//The global variable is declared
+	// The global variable is declared
 	public static WebDriver driver;
 
 	// The method launchBrowser is used to launch the browser
 	public void launchBrowser() {
 
-		// provide your path of driver location
+		// Provide the path of driver location
 		System.setProperty("webdriver.firefox.marionette", "./BrowserDrivers/geckodriver.exe");
 
 		// Driver instance is created

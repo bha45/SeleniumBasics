@@ -1,9 +1,15 @@
+/**
+ * @author Jagatheshwaran
+ * 
+ */
 package testNG_Parallel_Grouping;
 
+//Importing the predefined class libraries
 import org.testng.annotations.AfterGroups;
 import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.Test;
 
+//The Class is created with name : BeforeGroups_Test_AfterGroups
 public class BeforeGroups_Test_AfterGroups {
 
 	@BeforeGroups

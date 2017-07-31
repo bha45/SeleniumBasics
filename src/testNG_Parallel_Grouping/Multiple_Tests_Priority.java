@@ -1,11 +1,20 @@
+/**
+ * @author Jagatheshwaran
+ * 
+ */
 package testNG_Parallel_Grouping;
 
+//Importing the predefined class libraries
 import org.junit.Assert;
 import org.testng.annotations.Test;
 
+//The Class is created with name : Multiple_Tests_Priority
 public class Multiple_Tests_Priority 
 {
 
+	// Priority is used to set the preferences to the methods to run 
+	// If priority is not set for the method then methods will run in alphabetical order
+	
 	@Test (priority = 1)
 	public void testAA(){
 	Assert.assertEquals("Gmail", "Gmail");
@@ -19,6 +28,7 @@ public class Multiple_Tests_Priority
 	Assert.assertEquals("Yahoo", "Yahoo");
 	}
 	
+	// The below method's priority is 3 but its enabled to false so this method will not run
 	@Test (priority = 3,enabled = false)
 	public void testA()
 	{

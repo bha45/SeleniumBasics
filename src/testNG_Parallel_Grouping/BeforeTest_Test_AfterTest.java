@@ -1,11 +1,18 @@
+/**
+ * @author Jagatheshwaran
+ * 
+ */
 package testNG_Parallel_Grouping;
 
+// Importing the predefined class libraries
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+// The Class is created with name : BeforeTest_Test_AfterTest
 public class BeforeTest_Test_AfterTest {
 	
+	// BeforeTest - The annotated method will be run before any Test methods belonging to classes is run
 	@BeforeTest
 	public void login() {
 		System.out.println("Login to Ecommerce Site Successful");
@@ -36,6 +43,7 @@ public class BeforeTest_Test_AfterTest {
 		System.out.println("Place Order Successful");
 	}
 
+	// AfterTest - The annotated method will be run after all the Test methods belonging to the classes have run
 	@AfterTest
 	public void logout() {
 		System.out.println("Logout of Ecommerce Site Successful");

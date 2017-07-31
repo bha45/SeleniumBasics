@@ -1,7 +1,13 @@
+/**
+ * @author Jagatheshwaran
+ * 
+ */
 package testNG_Parallel_Grouping;
 
+//Importing the predefined class libraries
 import org.testng.annotations.Test;
 
+//The Class is created with name : Test_With_Threads
 public class Test_With_Threads {
 	
 	@Test

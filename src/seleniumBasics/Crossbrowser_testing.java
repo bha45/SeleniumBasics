@@ -23,21 +23,21 @@ public class CrossBrowser_Testing {
 			if (browser == 1) {
 
 				browsername = "FireFox";
-				// provide your path of driver location
+				// Provide the path of driver location
 				System.setProperty("webdriver.firefox.marionette", "./BrowserDrivers/geckodriver.exe");
 				// Driver instance is created
 				driver = new FirefoxDriver();
 			} else if (browser == 2) {
 
 				browsername = "Chrome";
-				// provide your path of driver location
+				// Provide the path of driver location
 				System.setProperty("webdriver.chrome.driver", "./BrowserDrivers/chromedriver.exe");
 				// Driver instance is created
 				driver = new ChromeDriver();
 			} else if (browser == 3) {
 
 				browsername = "Internet Explorer";
-				// provide your path of driver location
+				// Provide the path of driver location
 				System.setProperty("webdriver.ie.driver", "./BrowserDrivers/IEdriver.exe");
 				// Driver instance is created
 				driver = new InternetExplorerDriver();
