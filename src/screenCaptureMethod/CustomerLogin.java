@@ -1,5 +1,11 @@
+/**
+ * @author Jagatheshwaran
+ * 
+ */
+// Package is created as screenCaptureMethod
 package screenCaptureMethod;
 
+// Importing the predefined class libraries
 import java.io.File;
 import java.io.IOException;
 
@@ -10,14 +16,12 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-
+// The class is created with name : CustomerLogin
 public class CustomerLogin {
 
+	// The global variable is declared
 	public static WebDriver driver;
 	
-	static String path = "./SreenShots/"+System.nanoTime()+".png";
-	/*static String path = "./SreenShots/1.png";
-	static String path1 = "./SreenShots/2.png";*/
 	
 	public static void main(String[] args) throws IOException, InterruptedException {
 		
@@ -31,11 +35,15 @@ public class CustomerLogin {
 		driver.get("http://gcrit.com/build3/");
 
 		driver.findElement(By.linkText("login")).click();
+		
+		// Calling takesnap method - It will capture the screenshot with the System Time as Screenshot name
 		CustomerLogin.takesnap(driver, "./SreenShots/"+System.nanoTime()+".png");
 		
 		driver.findElement(By.name("email_address")).sendKeys("testjaga007@gmail.com");
 		driver.findElement(By.name("password")).sendKeys("jaga@12345");
 		driver.findElement(By.id("tdb5")).click();
+		
+		// Calling takesnap method - It will capture the screenshot with the System Time as Screenshot name
 		CustomerLogin.takesnap(driver, "./SreenShots/"+System.nanoTime()+".png");
 
 		// Capturing the Current page url
@@ -55,12 +63,24 @@ public class CustomerLogin {
 		driver.close();
 
 	}
-
+	
+	/** 
+	 * The method name is : takesnap - It will used to capture the screenshot 
+	 * @param - driv
+	 * @param - filepath
+	 */
 	public static void takesnap(WebDriver driv, String filepath) throws IOException {
 
+		// Convert web driver object (driv) to TakeScreenshot
 		TakesScreenshot src = ((TakesScreenshot) driv);
+		
+		// Call getScreenshotAs method to create screenshot as image file
 		File source = src.getScreenshotAs(OutputType.FILE);
+		
+		// Create new destination file - It will be used to store the captured screenshot
 		File destination = new File(filepath);
+		
+		// FileUtils.copyFile - It is used to copy screenshot from source file to destination file
 		FileUtils.copyFile(source, destination);
 
 	}

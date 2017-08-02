@@ -1,5 +1,11 @@
+/**
+ * @author Jagatheshwaran
+ * 
+ */
+// Package is created as dataReadingFromPropertyFile
 package dataReadingFromPropertyFile;
 
+// Importing the predefined class libraries
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -13,8 +19,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+// The class is created with name : CustomerLogin
 public class CustomerLogin {
 
+	// The global variables are declared
 	public static Properties Repository = new Properties();
 	public File fe;
 	public FileInputStream FI;
@@ -28,8 +36,14 @@ public class CustomerLogin {
 	 * @author Jagatheshwaran
 	 */
 	public void loadProperties() throws IOException {
+		
+		// The property file is assigned to the File object (fe)
 		fe = new File(System.getProperty("user.dir") + "//src//dataReadingFromPropertyFile//config.properties");
+		
+		// The file object (fe) is assigned to FileInputStream object (FI) to read the property file
 		FI = new FileInputStream(fe);
+		
+		// The below line will used to load the property file which is assigned to the FileInputStream object (FI)
 		Repository.load(FI);
 
 	}
@@ -43,14 +57,18 @@ public class CustomerLogin {
 	 */
 	public String getTestData(String property) throws InvocationTargetException {
 
+		// The property file is assigned to the File object (fe)
 		fe = new File(System.getProperty("user.dir") + "//src//dataReadingFromPropertyFile//config.properties");
 		try {
+			
+			// The file object (fe) is assigned to FileInputStream object (FI) to read the property file
 			FI = new FileInputStream(fe);
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
 		try {
+			// The below line will used to load the property file which is assigned to the FileInputStream object (FI)
 			Repository.load(FI);
 
 		} catch (IOException e) {
@@ -70,6 +88,7 @@ public class CustomerLogin {
 
 	public static void main(String[] args) throws InvocationTargetException {
 		
+		// The object of class CustomerLogin is created
 		CustomerLogin c = new CustomerLogin();
 		
 		// Provide the path of driver location
@@ -83,13 +102,12 @@ public class CustomerLogin {
 		String username = c.getTestData("username");
 		String password = c.getTestData("password");
 		
-		// Launching the browser with the below url
-		
+		// Launching the browser with the below url	
 		driver.get(url);
 	
 		driver.findElement(By.linkText("login")).click();
-		driver.findElement(By.xpath(".//*[@name='email_address']")).sendKeys(username);
-		driver.findElement(By.xpath(".//*[@name='password']")).sendKeys(password);
+		driver.findElement(By.name("email_address")).sendKeys(username);
+		driver.findElement(By.name("password")).sendKeys(password);
 		driver.findElement(By.id("tdb5")).click();
 
 		// Capturing the Current page url
