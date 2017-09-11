@@ -1,10 +1,16 @@
+/**
+ * @author Jagatheshwaran
+ * 
+ */
+// Package is created as pageScrollAndZoom
 package pageScrollAndZoom;
 
+// Importing the predefined class libraries
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-
+// The class is created with name : Zoom
 public class Zoom {
 
 	public static void main(String[] args) throws InterruptedException {
