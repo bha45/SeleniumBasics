@@ -58,7 +58,7 @@ public class DatadrivenTestToReadExcel {
 	// rows will return number of rows in the sheet
 	int rows = s.getRows();
 	
-	// columns will return number of rows in the sheet
+	// columns will return number of columns in the sheet
 	int columns = s.getColumns();
 	//System.out.println(rows);
 	//System.out.println(columns);

@@ -9,10 +9,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class Handling_WindowPopup{
+public class Handling_WindowPopup {
 
 	public static void main(String[] args) {
-		
+
 		// Provide the path of driver location
 		System.setProperty("webdriver.firefox.marionette", "./BrowserDrivers/geckodriver.exe");
 
