@@ -7,17 +7,14 @@ package seleniumBasics;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Handling_Exceptions {
 
 	public static void main(String[] args) {
 
-		// Provide the path of driver location
-		System.setProperty("webdriver.firefox.marionette", "./BrowserDrivers/geckodriver.exe");
-
-		// Driver instance is created
-		WebDriver driver = new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver", "./BrowserDrivers/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
 
 		// Launching the browser with the below url
 		driver.get("https://www.google.co.in");

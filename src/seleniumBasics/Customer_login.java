@@ -21,7 +21,7 @@ public class Customer_Login {
 		// Launching the browser with the below url
 		driver.get("http://gcrit.com/build3/");
 
-		driver.findElement(By.linkText("login")).click();
+		driver.findElement(By.linkText("login1")).click();
 		driver.findElement(By.name("email_address")).sendKeys("testjaga007@gmail.com");
 		driver.findElement(By.name("password")).sendKeys("jaga@12345");
 		driver.findElement(By.id("tdb5")).click();

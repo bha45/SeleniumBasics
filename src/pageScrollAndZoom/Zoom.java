@@ -29,12 +29,12 @@ public class Zoom {
 		
 		Thread.sleep(3000);
 		
-		// JavascriptExecutor is used to perform the page scroll - it will Zoom out to 100%
+		// JavascriptExecutor is used to perform the page Zoom - it will Zoom out to 100%
 		((JavascriptExecutor) driver).executeScript("document.body.style.zoom='100%'");
 
 		Thread.sleep(3000);
 		
-		// JavascriptExecutor is used to perform the page scroll - it will Zoom in to 70%
+		// JavascriptExecutor is used to perform the page Zoom - it will Zoom in to 70%
 		((JavascriptExecutor) driver).executeScript("document.body.style.zoom='70%'");
 		
 		Thread.sleep(3000);

@@ -46,6 +46,7 @@ public class Handling_WindowHandle {
 
 		driver.switchTo().window(parent);
 		System.out.println(driver.getCurrentUrl());
+		driver.close();
 
 	}
 
