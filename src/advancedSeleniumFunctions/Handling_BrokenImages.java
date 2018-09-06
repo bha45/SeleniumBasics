@@ -1,4 +1,4 @@
-package seleniumBasics;
+package advancedSeleniumFunctions;
 
 import java.util.List;
 

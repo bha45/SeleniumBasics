@@ -1,4 +1,4 @@
-package seleniumBasics;
+package advancedSeleniumFunctions;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
