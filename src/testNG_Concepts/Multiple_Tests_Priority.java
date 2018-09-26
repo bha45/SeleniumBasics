@@ -2,7 +2,7 @@
  * @author Jagatheshwaran
  * 
  */
-package testNG_Parallel_Grouping;
+package testNG_Concepts;
 
 //Importing the predefined class libraries
 import org.junit.Assert;

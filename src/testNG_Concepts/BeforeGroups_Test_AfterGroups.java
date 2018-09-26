@@ -2,7 +2,7 @@
  * @author Jagatheshwaran
  * 
  */
-package testNG_Parallel_Grouping;
+package testNG_Concepts;
 
 //Importing the predefined class libraries
 import org.testng.annotations.AfterGroups;
@@ -17,7 +17,7 @@ public class BeforeGroups_Test_AfterGroups {
 		System.out.println("Login to Ecommerce Site Successful");
 	}
 
-	@Test(groups = { "sanity" }, priority = 1)
+	@Test(groups = { "sanity","regression" }, priority = 1)
 	public void searchProduct() {
 		System.out.println("Browse and Search of Product Successful");
 	}
@@ -37,7 +37,7 @@ public class BeforeGroups_Test_AfterGroups {
 		System.out.println("Add Payment Method Successful");
 	}
 
-	@Test(groups = { "regression" }, priority = 3)
+	@Test(dependsOnGroups  = { "sanity.*" },priority = 3)
 	public void placeOrder() {
 		System.out.println("Place Order Successful");
 	}

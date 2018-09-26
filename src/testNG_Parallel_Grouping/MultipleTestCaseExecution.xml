@@ -1,8 +1,0 @@
-<suite name="Ecommerce" parallel="false">
-	<test name="SanityTest">
-		<classes>
-			<class name="testNG_Parallel_Grouping.BeforeClass_Test_AfterClass" />
-			<class name="testNG_Parallel_Grouping.BeforeTest_Test_AfterTest" />
-		</classes>
-	</test>
-</suite>
