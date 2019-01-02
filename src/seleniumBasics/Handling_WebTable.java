@@ -1,4 +1,5 @@
 package seleniumBasics;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -13,9 +14,16 @@ public class Handling_WebTable {
 
 	public static void main(String ar[]) throws IOException {
 
+		// Provide the path of driver location
 		System.setProperty("webdriver.chrome.driver", "./BrowserDrivers/chromedriver.exe");
-		driver = new ChromeDriver();
 
+		// Driver instance is created
+		WebDriver driver = new ChromeDriver();
+
+		// To maximize Browser Window
+		driver.manage().window().maximize();
+
+		// Launching Browser with below URL
 		driver.get("file:///E:/ECLIPSE%20ENV/WorkSpace/From_Old_WorkSpace/SeleniumBasics/TestResources/WebTable.html");
 
 		WebElement table = driver.findElement(By.xpath("//table"));
@@ -41,6 +49,7 @@ public class Handling_WebTable {
 			}
 		}
 
+		// It will close the Browser window
 		driver.close();
 
 	}

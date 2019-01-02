@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class DisabledElement {
 
 	public static void main(String ar[]) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "./src/main/resources/Drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./BrowserDrivers/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("file:///E:/ECLIPSE%20ENV/WorkSpace/From_Old_WorkSpace/SeleniumBasics/TestResources/DisabledElement.html");
 

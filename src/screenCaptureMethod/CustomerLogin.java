@@ -82,6 +82,9 @@ public class CustomerLogin {
 		
 		// FileUtils.copyFile - It is used to copy screenshot from source file to destination file
 		FileUtils.copyFile(source, destination);
+		
+		//File sourceImage = ((TakesScreenshot) driv).getScreenshotAs(OutputType.FILE);
+		//FileUtils.copyFile(sourceImage, destination);
 
 	}
 }

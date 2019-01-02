@@ -16,7 +16,7 @@ import java.util.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 // The class is created with name : CustomerLogin
@@ -29,24 +29,6 @@ public class CustomerLogin {
 	public static WebDriver driver;
 	public static WebDriverWait wait;
 	public WebElement element;
-
-	/**
-	 * This method will initialize and load the Property file
-	 * 
-	 * @author Jagatheshwaran
-	 */
-	public void loadProperties() throws IOException {
-		
-		// The property file is assigned to the File object (fe)
-		fe = new File(System.getProperty("user.dir") + "//src//dataReadingFromPropertyFile//config.properties");
-		
-		// The file object (fe) is assigned to FileInputStream object (FI) to read the property file
-		FI = new FileInputStream(fe);
-		
-		// The below line will used to load the property file which is assigned to the FileInputStream object (FI)
-		Repository.load(FI);
-
-	}
 
 	/**
 	 * This method will fetch the Test Data from the Property file
@@ -92,10 +74,10 @@ public class CustomerLogin {
 		CustomerLogin c = new CustomerLogin();
 		
 		// Provide the path of driver location
-		System.setProperty("webdriver.firefox.marionette", "./BrowserDrivers/geckodriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./BrowserDrivers/chromedriver.exe");
 
 		// Driver instance is created
-		WebDriver driver = new FirefoxDriver();
+		WebDriver driver = new ChromeDriver();
 
 		// Test Data taken from Property file
 		String url = c.getTestData("url");

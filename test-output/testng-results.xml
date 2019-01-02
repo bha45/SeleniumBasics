@@ -1,29 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Ecommerce1" duration-ms="138" started-at="2018-09-26T03:14:14Z" finished-at="2018-09-26T03:14:14Z">
+  <suite name="Default suite" duration-ms="392" started-at="2018-11-23T04:20:13Z" finished-at="2018-11-23T04:20:13Z">
     <groups>
+      <group name="regression">
+        <method signature="BeforeGroups_Test_AfterGroups.addAddress()[pri:1, instance:testNG_Concepts.BeforeGroups_Test_AfterGroups@1c27452]" name="addAddress" class="testNG_Concepts.BeforeGroups_Test_AfterGroups"/>
+        <method signature="BeforeGroups_Test_AfterGroups.searchProduct()[pri:1, instance:testNG_Concepts.BeforeGroups_Test_AfterGroups@1c27452]" name="searchProduct" class="testNG_Concepts.BeforeGroups_Test_AfterGroups"/>
+        <method signature="BeforeGroups_Test_AfterGroups.payMoney()[pri:2, instance:testNG_Concepts.BeforeGroups_Test_AfterGroups@1c27452]" name="payMoney" class="testNG_Concepts.BeforeGroups_Test_AfterGroups"/>
+      </group> <!-- regression -->
+      <group name="sanity">
+        <method signature="BeforeGroups_Test_AfterGroups.addProduct()[pri:2, instance:testNG_Concepts.BeforeGroups_Test_AfterGroups@1c27452]" name="addProduct" class="testNG_Concepts.BeforeGroups_Test_AfterGroups"/>
+        <method signature="BeforeGroups_Test_AfterGroups.searchProduct()[pri:1, instance:testNG_Concepts.BeforeGroups_Test_AfterGroups@1c27452]" name="searchProduct" class="testNG_Concepts.BeforeGroups_Test_AfterGroups"/>
+      </group> <!-- sanity -->
     </groups>
-    <test name="SanityTest" duration-ms="138" started-at="2018-09-26T03:14:14Z" finished-at="2018-09-26T03:14:14Z">
-      <class name="testNG_Concepts.Test_With_Thread">
-        <test-method status="PASS" signature="logout()[pri:0, instance:testNG_Concepts.Test_With_Thread@19651f3]" name="logout" duration-ms="15" started-at="2018-09-26T03:14:14Z" finished-at="2018-09-26T03:14:14Z">
+    <test name="Default test" duration-ms="392" started-at="2018-11-23T04:20:13Z" finished-at="2018-11-23T04:20:13Z">
+      <class name="testNG_Concepts.BeforeGroups_Test_AfterGroups">
+        <test-method status="PASS" signature="addAddress()[pri:1, instance:testNG_Concepts.BeforeGroups_Test_AfterGroups@1c27452]" name="addAddress" duration-ms="47" started-at="2018-11-23T04:20:13Z" finished-at="2018-11-23T04:20:13Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logout -->
-        <test-method status="PASS" signature="placeOrder()[pri:0, instance:testNG_Concepts.Test_With_Thread@19651f3]" name="placeOrder" duration-ms="30" started-at="2018-09-26T03:14:14Z" finished-at="2018-09-26T03:14:14Z">
+        </test-method> <!-- addAddress -->
+        <test-method status="PASS" signature="addProduct()[pri:2, instance:testNG_Concepts.BeforeGroups_Test_AfterGroups@1c27452]" name="addProduct" duration-ms="0" started-at="2018-11-23T04:20:13Z" finished-at="2018-11-23T04:20:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addProduct -->
+        <test-method status="PASS" signature="searchProduct()[pri:1, instance:testNG_Concepts.BeforeGroups_Test_AfterGroups@1c27452]" name="searchProduct" duration-ms="0" started-at="2018-11-23T04:20:13Z" finished-at="2018-11-23T04:20:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProduct -->
+        <test-method status="PASS" signature="payMoney()[pri:2, instance:testNG_Concepts.BeforeGroups_Test_AfterGroups@1c27452]" name="payMoney" duration-ms="0" started-at="2018-11-23T04:20:13Z" finished-at="2018-11-23T04:20:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- payMoney -->
+        <test-method status="PASS" signature="placeOrder()[pri:3, instance:testNG_Concepts.BeforeGroups_Test_AfterGroups@1c27452]" name="placeOrder" duration-ms="0" depends-on-groups="sanity.*" started-at="2018-11-23T04:20:13Z" finished-at="2018-11-23T04:20:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- placeOrder -->
-        <test-method status="PASS" signature="login()[pri:0, instance:testNG_Concepts.Test_With_Thread@19651f3]" name="login" duration-ms="30" started-at="2018-09-26T03:14:14Z" finished-at="2018-09-26T03:14:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="search()[pri:0, instance:testNG_Concepts.Test_With_Thread@19651f3]" name="search" duration-ms="0" started-at="2018-09-26T03:14:14Z" finished-at="2018-09-26T03:14:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- search -->
-      </class> <!-- testNG_Concepts.Test_With_Thread -->
-    </test> <!-- SanityTest -->
-  </suite> <!-- Ecommerce1 -->
+      </class> <!-- testNG_Concepts.BeforeGroups_Test_AfterGroups -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

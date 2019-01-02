@@ -4,8 +4,10 @@
  */
 package testNG_Concepts;
 
+import org.testng.Assert;
+
 //Importing the predefined class libraries
-import org.junit.Assert;
+
 import org.testng.annotations.Test;
 
 //The Class is created with name : Mutliple_Tests
@@ -28,6 +30,7 @@ public class Mutliple_Tests {
 		Assert.assertEquals("Yahoo", "Yahoo");
 	}
 
+	@SuppressWarnings("unused")
 	@Test(expectedExceptions = ArithmeticException.class)
 	public void testMath() {
 		int a = 5 / 0;

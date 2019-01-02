@@ -11,6 +11,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Handling_HighLighter {
+	
+	public static WebDriver driver;
 
 	public static void main(String[] args) {
 
@@ -18,7 +20,7 @@ public class Handling_HighLighter {
 		System.setProperty("webdriver.chrome.driver", "./BrowserDrivers/chromedriver.exe");
 
 		// Driver instance is created
-		WebDriver driver = new ChromeDriver();
+		driver = new ChromeDriver();
 
 		// Launching the browser with the below url
 		driver.get("http://www.gcrit.com/build3/admin/login.php");

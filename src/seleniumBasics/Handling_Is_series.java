@@ -6,20 +6,24 @@ package seleniumBasics;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Is_series {
+public class Handling_Is_series {
 
 	public static void main(String[] args) {
 
 		// Provide the path of driver location
-		System.setProperty("webdriver.firefox.marionette", "./BrowserDrivers/geckodriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./BrowserDrivers/chromedriver.exe");
 
 		// Driver instance is created
-		WebDriver driver = new FirefoxDriver();
+		WebDriver driver = new ChromeDriver();
+
+		// To maximize Browser Window
+		driver.manage().window().maximize();
 
 		// Launching the browser with the below url
-		driver.get("https://accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/#identifier");
+		driver.get(
+				"https://accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/#identifier");
 
 		// The below method will maximize the browser window
 		driver.manage().window().maximize();
@@ -38,6 +42,9 @@ public class Is_series {
 		// is Selected - It will check whether the Web element is selected
 		boolean c = driver.findElement(By.name("option2")).isSelected();
 		System.out.println(c);
+
+		// It will close the Browser window
+		driver.close();
 
 	}
 

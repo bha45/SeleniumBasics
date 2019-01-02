@@ -15,7 +15,7 @@ public class Handling_MultipleSelect {
 
 		System.setProperty("webdriver.chrome.driver", "./BrowserDrivers/chromedriver.exe");
 
-		// Create a new instance of the FireFox driver
+		// Create a new instance of the ChromeDriver
 		WebDriver driver = new ChromeDriver();
 
 		// Have an Implicit wait

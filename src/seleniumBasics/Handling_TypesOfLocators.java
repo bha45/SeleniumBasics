@@ -10,19 +10,22 @@ import org.openqa.selenium.WebElement;
 //import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class InspectingElementsWithVariousLocators 
-{
+public class Handling_TypesOfLocators {
 
 	public static void main(String[] args) throws InterruptedException {
-		
+
 		// Provide the path of driver location
-		System.setProperty("webdriver.firefox.marionette", "./BrowserDrivers/geckodriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./BrowserDrivers/chromedriver.exe");
 
 		// Driver instance is created
 		WebDriver driver = new ChromeDriver();
 
+		// To maximize Browser Window
+		driver.manage().window().maximize();
+
 		// Launching the browser with the below url
-		driver.get("https://accounts.google.com/ServiceLogin?sacu=1&scc=1&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&hl=en&service=mail#identifier");
+		driver.get(
+				"https://accounts.google.com/ServiceLogin?sacu=1&scc=1&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&hl=en&service=mail#identifier");
 
 		// Inspecting Element by id
 		driver.findElement(By.id("Email")).sendKeys("testjaga007");
@@ -57,11 +60,12 @@ public class InspectingElementsWithVariousLocators
 
 		// The below lines will show the simple example for sendkeys and clear methods
 		WebElement jaga = driver.findElement(By.id("Email"));
-		jaga.sendKeys("jagathesh298");
+		jaga.sendKeys("jagathesh");
 		Thread.sleep(3000);
 		jaga.clear();
 		Thread.sleep(3000);
 
+		// It will close the Browser window
 		driver.close();
 
 	}

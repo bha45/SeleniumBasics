@@ -13,12 +13,15 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 public class Handling_Interaction_between_Browsers {
 
 	public static void main(String[] args) throws InterruptedException {
-		
+
 		// Provide the path of driver location
 		System.setProperty("webdriver.firefox.marionette", "./BrowserDrivers/geckodriver.exe");
 
 		// Driver instance is created
 		WebDriver firefoxDriver = new FirefoxDriver();
+
+		// To maximize Browser Window
+		firefoxDriver.manage().window().maximize();
 
 		// Launching the browser with the below url
 		firefoxDriver.get("https://www.google.com");
@@ -32,6 +35,9 @@ public class Handling_Interaction_between_Browsers {
 		// Driver instance is created
 		WebDriver chromeDriver = new ChromeDriver();
 
+		// To maximize Browser Window
+		chromeDriver.manage().window().maximize();
+
 		// Launching the browser with the below url
 		chromeDriver.get("http://www.gcrit.com/build3/create_account.php?osCsid=1vbg1oj32ole3qrcv4b6mr7m24");
 		chromeDriver.findElement(By.name("firstname")).sendKeys(text);
@@ -42,6 +48,9 @@ public class Handling_Interaction_between_Browsers {
 
 		// Driver instance is created
 		WebDriver IEDriver = new InternetExplorerDriver();
+
+		// To maximize Browser Window
+		IEDriver.manage().window().maximize();
 
 		// Launching the browser with the below url
 		IEDriver.get("https://in.mail.yahoo.com/");

@@ -6,17 +6,21 @@ package seleniumBasics;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Customer_Login {
+
+public class Handling_LoginFunctionality {
 
 	public static void main(String[] args) {
-		
+
 		// Provide the path of driver location
-		System.setProperty("webdriver.firefox.marionette", "./BrowserDrivers/geckodriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./BrowserDrivers/chromedriver.exe");
 
 		// Driver instance is created
-		WebDriver driver = new FirefoxDriver();
+		WebDriver driver = new ChromeDriver();
+
+		// To maximize Browser Window
+		driver.manage().window().maximize();
 
 		// Launching the browser with the below url
 		driver.get("http://gcrit.com/build3/");
@@ -30,15 +34,12 @@ public class Customer_Login {
 		String url = driver.getCurrentUrl();
 
 		// Verifying the captured url
-		if (url.contains("http://www.gcrit.com/build3/index.php")) 
-		{
+		if (url.contains("http://www.gcrit.com/build3/index.php")) {
 			System.out.println("Login Successful - Passed");
-		} 
-		else 
-		{
+		} else {
 			System.out.println("Login Unsuccessful - Failed");
 		}
-		
+
 		// The below method will close the current browser window
 		driver.close();
 

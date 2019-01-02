@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNG_Concepts.Mutliple_Tests">
+      <class name="testNG_Concepts.ParameterizedClass">
         <methods>
-          <include name="testMath"/>
+          <include name="user"/>
         </methods>
-      </class> <!-- testNG_Concepts.Mutliple_Tests -->
+      </class> <!-- testNG_Concepts.ParameterizedClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

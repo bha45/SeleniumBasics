@@ -4,8 +4,10 @@
  */
 package testNG_Concepts;
 
+import org.testng.Assert;
+
 //Importing the predefined class libraries
-import org.junit.Assert;
+
 import org.testng.annotations.Test;
 
 //The Class is created with name : Multiple_Tests_Priority
@@ -21,7 +23,7 @@ public class Multiple_Tests_Priority
 	}
 	@Test (priority = 5)
 	public void testBB(){
-	Assert.assertEquals("Gmail", "Google");
+	Assert.assertEquals("Google", "Google");
 	}
 	@Test (priority = 10)
 	public void testCC(){

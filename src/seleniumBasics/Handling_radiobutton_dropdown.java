@@ -8,7 +8,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class Handling_Radiobutton_Dropdown {
@@ -16,20 +16,22 @@ public class Handling_Radiobutton_Dropdown {
 	public static void main(String[] args) {
 
 		// Provide the path of driver location
-		System.setProperty("webdriver.firefox.marionette", "./BrowserDrivers/geckodriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./BrowserDrivers/chromedriver.exe");
 
 		// Driver instance is created
-		WebDriver driver = new FirefoxDriver();
-		
-		// The method will maximize the browser window
+		WebDriver driver = new ChromeDriver();
+
+		// To maximize Browser Window
 		driver.manage().window().maximize();
 
 		// Radio button
 		// Launching the browser with the below url
 		driver.get("http://www.gcrit.com/build3/create_account.php");
 
-		// The below lines will navigate to below url and check radio button presence and click it
-		WebElement mradio = driver.findElement(By.xpath(".//*[@id='bodyContent']/form/div/div[2]/table/tbody/tr[1]/td[2]/input[1]"));
+		// The below lines will navigate to below url and check radio button presence
+		// and click it
+		WebElement mradio = driver
+				.findElement(By.xpath(".//*[@id='bodyContent']/form/div/div[2]/table/tbody/tr[1]/td[2]/input[1]"));
 		boolean status = mradio.isDisplayed();
 		System.out.println(status);
 		System.out.println(mradio.isEnabled());
@@ -50,6 +52,9 @@ public class Handling_Radiobutton_Dropdown {
 		List<WebElement> obj = dropdown.getOptions();
 		int total = obj.size();
 		System.out.println(total);
+
+		// It will close the Browser window
+		driver.close();
 
 	}
 }

@@ -7,19 +7,19 @@ package seleniumBasics;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Handling_WindowPopup {
 
 	public static void main(String[] args) {
 
 		// Provide the path of driver location
-		System.setProperty("webdriver.firefox.marionette", "./BrowserDrivers/geckodriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./BrowserDrivers/chromedriver.exe");
 
 		// Driver instance is created
-		WebDriver driver = new FirefoxDriver();
+		WebDriver driver = new ChromeDriver();
 
-		// The below method will maximize the browser window
+		// To maximize Browser Window
 		driver.manage().window().maximize();
 
 		// Launching the browser with the below url
@@ -34,6 +34,8 @@ public class Handling_WindowPopup {
 		System.out.println(error);
 		alertobj.accept();
 
+		// It will close the Browser window
+		driver.close();
 	}
 
 }
