@@ -32,12 +32,17 @@ public class Handling_WebTable {
 
 		WebElement table = driver.findElement(By.xpath("//table"));
 
+		// It gives total Rows count
 		List<WebElement> allRows = table.findElements(By.tagName("tr"));
+
+		// It gives total Columns count
 		List<WebElement> allColumns = table.findElements(By.tagName("td"));
 
 		System.out.println("All rows " + allRows.size());
 		System.out.println("All columns " + allColumns.size());
 
+		// The below code will iterate through Table rows and columns, Will print cell
+		// value and row value which match "UK"
 		for (WebElement row : allRows) {
 
 			List<WebElement> cells = row.findElements(By.tagName("td"));

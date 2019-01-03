@@ -1,4 +1,8 @@
-package advancedSeleniumFunctions;
+/**
+ * @author Jagatheshwaran
+ * 
+ */
+package seleniumBasics;
 
 import java.util.List;
 
@@ -13,17 +17,26 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Handling_BrokenImages {
 
+	// Declaring the Global variables
 	public static WebDriver driver;
 	public static int invalidImages = 0;
 
 	public static void main(String ar[]) throws InterruptedException {
 
+		// Provide the path of driver location
 		System.setProperty("webdriver.chrome.driver", "./BrowserDrivers/chromedriver.exe");
-		driver = new ChromeDriver();
 
+		// Driver instance is created
+		WebDriver driver = new ChromeDriver();
+
+		// To maximize Browser Window
+		driver.manage().window().maximize();
+
+		// Launching Browser with Below URL
 		driver.get("https://www.google.com/");
 		Thread.sleep(5000);
 
+		// Taking list of images in the Page
 		List<WebElement> images = driver.findElements(By.tagName("img"));
 		System.out.println("Total Images : " + images.size());
 
@@ -34,9 +47,12 @@ public class Handling_BrokenImages {
 
 		}
 		System.out.println("Broken Images Count : " + invalidImages);
+
+		// driver close - It will close the current browser window
 		driver.close();
 	}
 
+	// The below method verifies whether Image is an Valid Image or Broken Image
 	public static void verifyImage(WebElement image) {
 		try {
 
