@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Handling_Editbox_Textarea_ErrorMsg {
+public class Handling_EditboxTextAreaErrorMsg {
 
 	public static void main(String[] args) throws InterruptedException {
 

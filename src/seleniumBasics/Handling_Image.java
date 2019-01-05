@@ -6,10 +6,10 @@ package seleniumBasics;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Handling_Links {
+
+public class Handling_Image {
 
 	public static void main(String[] args) {
 
@@ -25,19 +25,18 @@ public class Handling_Links {
 		// Launching the browser with the below url
 		driver.get("https://www.google.co.in");
 
-		// link text - It will click the Gmail using linkText
-		driver.findElement(By.linkText("Gmail")).click();
+		// This line will check the presence of image
+		System.out.println(driver.findElement(By.id("hplogo")).isDisplayed());
+		System.out.println(driver.findElement(By.id("hplogo")).getAttribute("title"));
 
-		// partial link text - It will click the Gmail using PartillinkText
-		driver.findElement(By.partialLinkText("Gma")).click();
+		// This line will navigate the below url and click image button
+		driver.navigate().to("http://newtours.demoaut.com/");
+		driver.findElement(By.name("login")).click();
 
-		// link text - A web element is created and it will click the Gmail using
-		// linkText
-		WebElement mail = driver.findElement(By.linkText("Gmail"));
-		mail.click();
-		boolean mstatus = mail.isDisplayed();
-		System.out.println(mstatus);
-
+		// This line will navigate the below url and click image link
+		driver.navigate().to("http://www.seleniumhq.org/");
+		driver.findElement(By.xpath(".//*[@id='choice']/tbody/tr/td[2]/center/a/img")).click();
+		
 		// It will close the Browser window
 		driver.close();
 

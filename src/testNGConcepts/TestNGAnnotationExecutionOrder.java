@@ -16,7 +16,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class testNGAnnotationExecutionOrder {
+public class TestNGAnnotationExecutionOrder {
 
 	// The annotated method will be run before all tests in this suite have run.
 	@BeforeSuite
