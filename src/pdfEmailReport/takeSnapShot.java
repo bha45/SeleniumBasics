@@ -41,7 +41,7 @@ public class takeSnapShot {
 	 * This function will take screenshot
 	 * 
 	 * @param webdriver
-	 * @param fileWithPath
+	 * @param filePath
 	 * @throws Exception
 	 */
 	public static void takeSnap(WebDriver driver, String filePath) throws IOException {
@@ -50,7 +50,7 @@ public class takeSnapShot {
 			File destination = new File(filePath);
 			File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(source, destination);
-			System.out.println("Snap capture success!");
+			System.out.println("Failed Test Case Snap Captured!");
 		} catch (Exception e) {
 			filePath = null;
 			System.out.println("Exception Occured while taking Snap : " + e);

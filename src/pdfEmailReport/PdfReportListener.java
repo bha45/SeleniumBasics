@@ -35,7 +35,7 @@ import com.itextpdf.text.pdf.PdfWriter;
  * @author Jagatheshwaran
  * 
  */
-public class PdfReportListener implements ITestListener {
+public class PdfReportListener extends takeSnapShot implements ITestListener {
 	/**
 	 * Document
 	 */
@@ -123,7 +123,7 @@ public class PdfReportListener implements ITestListener {
 		String file = System.getProperty("user.dir") + "//" + "PDFSnapShot" + "//"
 				+ result.getMethod().getMethodName().toString() + ".jpg";
 		try {
-			takeSnapShot.takeSnap(takeSnapShot.getDriver(), file);
+			takeSnap(takeSnapShot.getDriver(), file);
 		} catch (Exception e) {
 
 			e.printStackTrace();
